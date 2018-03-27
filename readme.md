@@ -36,6 +36,12 @@ Remove all of the lines after:
 #### Love Life.
 
 
+#### (Optional)
+#### Remove scaffolding remote
+
+    git remote remove scaffolding
+
+
 ## npm Commands
 
 #### Run default watch task
