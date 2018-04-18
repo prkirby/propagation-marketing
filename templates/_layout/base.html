@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <link rel="home" href="{{ siteUrl }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header>
+  </header>
+  <main role="main">
+    {% block content %}
+      <h1>If you see me, you haven't set the content block in the child</h1>
+    {% endblock %}
+  </main>
+  {% block footer %}{% endblock %}
+</body>
+</html>
+
+{% includeCssFile "/dist/css/style.css" %}
+{% includeJsFile "/dist/js/app.js" %}
